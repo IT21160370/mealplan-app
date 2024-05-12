@@ -3,7 +3,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './layout/Navbar';
 import HomePage from './pages/HomePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AddMealPlan from './MealPlan/AddMealPlan';
+import EditMealPlan from './MealPlan/EditMealPlan';
+import CreateMealPlan from './MealPlan/CreateMealPlan';
+import ViweMealPlan from './MealPlan/ViweMealPlan';
 
 
 
@@ -14,8 +16,10 @@ function App() {
       <Navbar/>
 
       <Routes>
-        <Route exact path="/" element={<HomePage/>}/>
-        <Route exact path="/addmealplan" element={<AddMealPlan/>}/>
+        <Route exact path="/" element={<HomePage />}/>
+        <Route exact path="/createmealplan" element={<CreateMealPlan />}/>
+        <Route exact path="/editmealplan/:id" element={<EditMealPlan />}/>
+        <Route exact path="/viewmealplan/:id" element={<ViweMealPlan />} />
       </Routes>
       
       </Router>
